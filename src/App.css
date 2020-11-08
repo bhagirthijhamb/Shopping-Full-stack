@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@400;500&display=swap');
+:root {
+  --pink: #DBBBC0;
+  --yellow: #EEB75E;
+  --green: #96C5BE;
+  --button: #DF6A64;
+  --text: white;
+  --fancyFont: 'Work Sans';
+  --normalFont: 'Open Sans';
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--normalFont);
+  font-size: 1.4rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background: var(--green);
+  color: var(--text);
+  font-family: var(--fancyFont);
+}
+header h1 {
+  font-size: 7.5rem;
+}
+section {
+  margin: 50px 40px;
+}
+section h2 {
+  font-family: var(--fancyFont);
+  font-size: 3.5rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.product-single {
+  min-height: 20vh;
+  background: var(--pink);
+  padding: 20px;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products__cart {
+  background: var(--yellow);
+  padding: 0 10px;
+  color: white;
+}
+.product-single__cart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+button {
+  background: var(--button);
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  border-radius: 5px;
+}
+button:hover {
+  background: var(--green);
+  border-radius: 0;
+}
+.form {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 0 40px 0;
+}
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid var(--yellow);
+  padding: 15px 5px;
 }
-
-.App-link {
-  color: #61dafb;
+form h4 {
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input {
+ margin: 10px;
+ padding: 5px;
+}
+form button {
+  padding: 10px 12px;
 }
